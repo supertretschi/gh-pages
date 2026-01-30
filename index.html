@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="de">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Yew QR App</title>
+        <link rel="rust" href="Cargo.toml" />
+        <style>
+            body { margin: 0; padding: 0; background-color: #f4f4f9; }
+        </style>
+    <link rel="modulepreload" href="/opeda_wasm-ef6de4f9677f3f18.js" crossorigin="anonymous" integrity="sha384-E4L0k0w9w9nvw+WxHyq8Iraoe0j/RSJJ58mpwXhmpXYXYhTpG0OstFv6dDKtbAH2"><link rel="preload" href="/opeda_wasm-ef6de4f9677f3f18_bg.wasm" crossorigin="anonymous" integrity="sha384-Iexq4HV6HksgPy4+/MBMqBaysb09z34zDezDAt51I2dT2neNC3BBIbFCY90V1xIM" as="fetch" type="application/wasm"></head>
+    <body>
+<script type="module">
+import init, * as bindings from '/opeda_wasm-ef6de4f9677f3f18.js';
+const wasm = await init({ module_or_path: '/opeda_wasm-ef6de4f9677f3f18_bg.wasm' });
+
+
+window.wasmBindings = bindings;
+
+
+dispatchEvent(new CustomEvent("TrunkApplicationStarted", {detail: {wasm}}));
+
+</script></body>
+</html>
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Yew QR App</title>
+    <link rel="rust" href="Cargo.toml" />
+    <link rel="manifest" href="manifest.json" />
+    <link rel="copy-file" href="manifest.json" />
+    <link rel="copy-file" href="service-worker.js" />
+    <link rel="copy-file" href="icon-192.png" />
+    <link rel="copy-file" href="icon-512.png" />
+    
+    <meta name="theme-color" content="#007bff"/>
+<link rel="modulepreload" href="/opeda_wasm-ef6de4f9677f3f18.js" crossorigin="anonymous" integrity="sha384-E4L0k0w9w9nvw+WxHyq8Iraoe0j/RSJJ58mpwXhmpXYXYhTpG0OstFv6dDKtbAH2"><link rel="preload" href="/opeda_wasm-ef6de4f9677f3f18_bg.wasm" crossorigin="anonymous" integrity="sha384-Iexq4HV6HksgPy4+/MBMqBaysb09z34zDezDAt51I2dT2neNC3BBIbFCY90V1xIM" as="fetch" type="application/wasm"></head>
+<body>
+    <script>
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('/service-worker.js');
+            });
+        }
+    </script>
+
+<script type="module">
+import init, * as bindings from '/opeda_wasm-ef6de4f9677f3f18.js';
+const wasm = await init({ module_or_path: '/opeda_wasm-ef6de4f9677f3f18_bg.wasm' });
+
+
+window.wasmBindings = bindings;
+
+
+dispatchEvent(new CustomEvent("TrunkApplicationStarted", {detail: {wasm}}));
+
+</script></body>
+</html>
